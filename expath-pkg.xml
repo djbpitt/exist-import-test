@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package
+    xmlns="http://expath.org/ns/pkg"
+    name="http://www.obdurodon.org/app/exist-import-test"
+    abbrev="exist-import-test"
+    version="0.0.1"
+    spec="1.0">
+    <title>Explore variable declaration in library module</title>
+    <dependency processor="http://exist-db.org" semver-min="6.2.0"/>
+</package>
