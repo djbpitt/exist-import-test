@@ -20,9 +20,12 @@ declare variable $pathToMss as xs:string :=
     </head>
     <body>
         <h1>Files</h1>
+        <p><strong>Note:</strong> Links assume that app is installed as <i>http://localhost:8080/exist/apps/exist-import-test/</i></p>
         <ul>
-            <li><a href="read?filename=AM149NBW.xml">AM149NBW</a></li>
-            <li><a href="read?filename=AM76NBW.xml">AM76NBW</a></li>
+            <li><a href="read?filename=AM149NBW.xml">AM149NBW</a> 
+            (<a href="http://localhost:8080/exist/apps/exist-import-test/modules/read.xq?filename=AM149NBW.xml">direct link, bypassing controller</a>)</li>
+            <li><a href="read?filename=AM76NBW.xml">AM76NBW</a>
+            (<a href="http://localhost:8080/exist/apps/exist-import-test/modules/read.xq?filename=AM76NBW.xml">direct link, bypassing controller</a>)</li>
         </ul>
     </body>
 </html>

@@ -3,11 +3,7 @@ module namespace re = "http://www.ilit.bas.bg/repertorium/ns/3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 
 declare variable $re:genres as element(genre)+ :=
-    doc(concat(
-        request:get-attribute("$exist:root"), 
-        request:get-attribute("$exist:controller"), 
-        "/aux/genres.xml"
-    ))/descendant::genre;
+    doc("/db/apps/exist-import-test/aux/genres.xml")/descendant::genre;
 
 declare function re:bgMsName($ms as element(tei:TEI)) as xs:string {
     let $individual as element(tei:msName)* := $ms/descendant::tei:msIdentifier/tei:msName[lang('bg')][@type eq 'individual']  

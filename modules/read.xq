@@ -9,14 +9,9 @@ declare option output:html-version "5.0";
 declare option output:indent "yes";
 
 (: Housekeeping :)
-declare variable $exist:root as xs:string :=
-    request:get-attribute("$exist:root");
-declare variable $exist:controller as xs:string :=
-    request:get-attribute("$exist:controller");
-
 declare variable $filename as xs:string := request:get-parameter("filename", "Error: no filename!");
 declare variable $ms-path as xs:string :=
-    concat($exist:root, $exist:controller, '/mss/', $filename);
+    concat('/db/apps/exist-import-test/mss/', $filename);
 declare variable $ms as element(tei:TEI) := doc($ms-path)/*;
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +23,7 @@ declare variable $ms as element(tei:TEI) := doc($ms-path)/*;
         <ul>
             <li>Filename: {$filename}</li>
             <li>Path to manuscript: {$ms-path}</li>
-            <li>Manuscript name: {re:bgMsName($ms)}</li>
+            <li>Manuscript name with controller: {re:bgMsName($ms)}</li>
         </ul>
     </body>
 </html>
